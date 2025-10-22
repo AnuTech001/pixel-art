@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: clamp(300px, 90%, 800px);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: clamp(20px, 5%, 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "VT323", "Press Start 2P";
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin: clamp(10px, 2%, 20px);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+span {
+  font-family: "VT323", "Press Start 2P";
+  text-align: center;
+  color: white;
+  margin-bottom: clamp(10px, 2%, 20px);
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(10px, 2%, 20px);
+  flex-wrap: wrap;
+  gap: clamp(10px, 2%, 20px);
+  padding: clamp(10px, 2%, 20px);
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cor-paleta {
+  display: flex;
+  gap: clamp(10px, 2%, 20px);
+  flex-wrap: wrap;
+}
+
+.cor-opcao {
+  width: clamp(40px, 10vw, 80px);
+  height: clamp(40px, 10vw, 80px);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.cor-opcao:hover {
+  transform: scale(1.1);
+}
+
+.cor-opcao.ativada {
+  border: 2px solid #333;
+  transform: scale(0.9);
+}
+
+button {
+  padding: clamp(10px, 2%, 20px) 5px;
+  margin: clamp(5px, 1%, 10px) 0;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#clear-btn {
+  background-color: #f44336;
+}
+
+#clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(10px, 2%, 20px);
+}
+
+.pixel-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-gap: 1px;
+  background-color: #ddd;
+  border: 2px solid #555;
+  width: fit-content;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pixel {
+  width: clamp(11.5px, 4vw, 21.5px);
+  height: clamp(11.5px, 4vw, 21.5px);
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pixel:hover {
+  opacity: 0.8;
+}
+
+.instrucoes {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  text-align: center;
+  padding: clamp(5px, 1%, 10px);
+  border-radius: 10px;
+  background-color: #e9ecef;
+  margin-top: clamp(10px, 2%, 20px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instrucoes h3 {
+  margin-bottom: clamp(5px, 1%, 10px);
+  color: #495057;
+}
+
+.instrucoes p {
+  text-align: left;
+  margin-bottom: clamp(3px, 1%, 5px);
+  line-height: 1.5;
+}
+
+footer {
+  margin: clamp(20px, 5%, 40px);
+  color: white;
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.anuzita {
+  width: clamp(50px, 10vw, 100px);
+}

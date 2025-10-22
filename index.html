@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    />
+    <meta
+      property="og:image"
+      content="https://anutech001.github.io/anutech001.github.io-jeozadaque.ltda/assets/images/logo.png"
+    />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:title" content="Pixel Art - Colorindo com Quadrados" />
+    <meta
+      property="og:description"
+      content="Um pequeno aplicativo web para criar pixel art colorindo uma 
+      grade de quadrados."
+    />
+    <meta
+      property="og:url"
+      content="https://anutech001.github.io/anutech001.github.io-jeozadaque.ltda/"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="assets/images/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="assets/images/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <!-- Aplle Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <!-- Android Chrome -->
+    <link
+      rel="icon"
+      href="assets/images/android-chrome-192x192.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="assets/images/android-chrome-512x512.png"
+      sizes="512x512"
+      type="image/png"
+    />
+    <!-- Web APP manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <title>Pixel Art - Colorindo com Quadrados</title>
+  </head>
+  <body>
+    <h1>Pixel Art - Colorindo com Quadrados</h1>
+    <span>
+      Explore os limites da sua criatividade!
+      <span role="img" aria-label="pincel de artista">🎨</span>
+    </span>
+    <div class="container">
+      <div class="controles">
+        <div>
+          <h3>Selecione uma cor:</h3>
+          <div class="cor-paleta" id="cor-paleta">
+            <!-- Cores serão adicionadas aqui via JavaScript -->
+          </div>
+        </div>
+        <div>
+          <button id="clear-btn">
+            Limpar tudo <span role="img" aria-label="lixeira">🗑️</span>
+          </button>
+          <button id="random-btn">
+            Cores aleatórias
+            <span role="img" aria-label="peça de quebra-cabeça">🧩</span>
+          </button>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="pixel-grid" id="pixel-grid">
+          <!-- Quadrados serão adicionados aqui via JavaScript -->
+        </div>
+      </div>
+      <div class="instrucoes">
+        <img
+          src="assets/images/anuzita.png"
+          alt="Imagem em estilo pixel art 
+        retrata uma personagem feminina com expressão alegre. Ela tem pele 
+        clara, olhos grandes e expressivos, bochechas rosadas e um pequeno 
+        sorriso. Seu cabelo azul está preso em duas maria-chiquinhas, reforçando 
+        um visual jovial e amigável. O estilo gráfico remete a jogos clássicos 
+        de 8 ou 16 bits, com traços quadrados e cores vibrantes, evocando 
+        nostalgia e criatividade."
+          class="anuzita"
+        />
+        <h3>Como usar?</h3>
+        <p>Selecione uma cor de sua preferência;</p>
+        <p>Clique no quadrado que deseja colorir;</p>
+        <p>
+          Use o botão
+          <strong>Limpar tudo</strong>
+          para apagar seu desenho;
+        </p>
+        <p>
+          Use o botão
+          <strong>Cores aleatórias ></strong>
+          para ter um desenho maluco;
+        </p>
+        <p>Não limite a sua imaginação!</p>
+      </div>
+    </div>
+    <footer>
+      <p>Colorindo com pixels</p>
+      <p>Versão: Beta</p>
+    </footer>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
