@@ -1,3 +1,7 @@
+:root {
+  --pixel-size: clamp(12px, 3vw, 24px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -111,8 +115,9 @@ button:hover {
 
 .pixel-grid {
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-gap: 1px;
+  grid-template-columns: repeat(20, var(--pixel-size));
+  grid-template-rows: repeat(20, var(--pixel-size));
+  gap: 0;
   background-color: #ddd;
   border: 2px solid #555;
   width: fit-content;
@@ -120,11 +125,13 @@ button:hover {
 }
 
 .pixel {
-  width: clamp(11.5px, 4vw, 21.5px);
-  height: clamp(11.5px, 4vw, 21.5px);
+  width: var(--pixel-size);
+  height: var(--pixel-size);
   background-color: white;
+  border: 1px solid #ccc;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-sizing: border-box;
 }
 
 .pixel:hover {
@@ -161,4 +168,49 @@ footer {
 
 .anuzita {
   width: clamp(50px, 10vw, 100px);
+}
+
+.grid-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.linha-coordenadas {
+  display: flex;
+  flex-direction: row;
+}
+
+.coordenadas-x {
+  display: grid;
+  grid-template-columns: repeat(20, var(--pixel-size));
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  color: #555;
+  margin-top: 5px;
+}
+
+.grade-com-coordenadas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coordenadas-y {
+  display: grid;
+  grid-template-rows: repeat(20, var(--pixel-size));
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  color: #555;
+  margin-right: 5px;
+}
+
+.coordenadas-x div,
+.coordenadas-y div {
+  width: var(--pixel-size);
+  height: var(--pixel-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px black solid;
+  padding: clamp(2px, 0.5%, 5px);
+  box-sizing: border-box;
 }

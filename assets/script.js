@@ -47,6 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
     colorPalette.appendChild(colorOption);
   });
 
+  const coordenadasY = document.querySelector(".coordenadas-y");
+  for (let i = 1; i <= 20; i++) {
+    const linha = document.createElement("div");
+    linha.textContent = i;
+    coordenadasY.appendChild(linha);
+  }
+
+  // ✅ Coordenadas X (embaixo)
+  const coordenadasX = document.querySelector(".coordenadas-x");
+  for (let i = 1; i <= 20; i++) {
+    const coluna = document.createElement("div");
+    coluna.textContent = i;
+    coordenadasX.appendChild(coluna);
+  }
+
   // Criar grade de pixels (20x20)
   for (let i = 0; i < 20 * 20; i++) {
     const pixel = document.createElement("div");

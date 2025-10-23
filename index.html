@@ -87,18 +87,21 @@
           </div>
         </div>
         <div>
-          <button id="clear-btn">
-            Limpar tudo <span role="img" aria-label="lixeira">🗑️</span>
-          </button>
-          <button id="random-btn">
-            Cores aleatórias
-            <span role="img" aria-label="peça de quebra-cabeça">🧩</span>
-          </button>
+          <button id="clear-btn">Limpar tudo</button>
+          <button id="random-btn">Cores aleatórias</button>
         </div>
       </div>
-      <div class="grid-container">
-        <div class="pixel-grid" id="pixel-grid">
-          <!-- Quadrados serão adicionados aqui via JavaScript -->
+      <div class="grid-wrapper">
+        <div class="linha-coordenadas">
+          <!-- Coordenadas Y (lado esquerdo) -->
+          <div class="coordenadas-y"></div>
+
+          <!-- Grade de pixels + coordenadas X -->
+          <div class="grade-com-coordenadas">
+            <div class="pixel-grid" id="pixel-grid"></div>
+            <!-- ✅ só uma vez -->
+            <div class="coordenadas-x"></div>
+          </div>
         </div>
       </div>
       <div class="instrucoes">
