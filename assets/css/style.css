@@ -1,5 +1,5 @@
 :root {
-  --pixel-size: clamp(12px, 3vw, 24px);
+  --pixel-size: clamp(13.2px, 4.2vw, 25.2px);
 }
 
 * {
@@ -79,7 +79,7 @@ span {
 }
 
 .cor-opcao.ativada {
-  border: 2px solid #333;
+  border: 2px solid #000;
   transform: scale(0.9);
 }
 
@@ -186,7 +186,7 @@ footer {
   grid-template-columns: repeat(20, var(--pixel-size));
   font-size: clamp(0.6rem, 1.5vw, 1rem);
   color: #555;
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
 .grade-com-coordenadas {
@@ -200,7 +200,7 @@ footer {
   grid-template-rows: repeat(20, var(--pixel-size));
   font-size: clamp(0.6rem, 1.5vw, 1rem);
   color: #555;
-  margin-right: 5px;
+  margin-right: 1px;
 }
 
 .coordenadas-x div,
@@ -213,4 +213,19 @@ footer {
   border: 1px black solid;
   padding: clamp(2px, 0.5%, 5px);
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem; /* equivale a 8px */
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border: 0.125rem solid #ccc; /* equivale a 2px */
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border: 0.125rem solid #ccc; /* equivale a 2px */
+  border-radius: 0.25rem; /* equivale a 4px */
 }

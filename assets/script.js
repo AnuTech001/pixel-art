@@ -21,6 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
     "#808080",
     "#FFD700",
     "#008000",
+    "#000080",
+    "#800000",
+    "#00FF7F",
+    "#4B0082",
+    "#FF4500",
+    "#ADD8E6",
+    "#D2691E",
+    "#9ACD32",
+    "#FF1493",
+    "#20B2AA",
+    "#FF6347",
+    "#40E0D0",
+    "#EE82EE",
+    "#F5DEB3",
+    "#7FFF00",
+    "#DC143C",
   ];
 
   let selectedColor = colors[0];
