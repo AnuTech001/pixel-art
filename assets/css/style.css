@@ -1,5 +1,5 @@
 :root {
-  --pixel-size: clamp(13.2px, 4.2vw, 25.2px);
+  --pixel-size: clamp(12.5px, 3.5vw, 24.5px);
 }
 
 * {
@@ -79,7 +79,7 @@ span {
 }
 
 .cor-opcao.ativada {
-  border: 2px solid #000;
+  border: 2px solid #ddd;
   transform: scale(0.9);
 }
 
