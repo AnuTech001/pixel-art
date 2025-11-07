@@ -1,7 +1,9 @@
+/* Roots */
 :root {
   --pixel-size: clamp(12.5px, 3.5vw, 24.5px);
 }
 
+/* Base */
 * {
   margin: 0;
   padding: 0;
@@ -18,16 +20,7 @@ body {
   align-items: center;
 }
 
-.container {
-  max-width: clamp(300px, 90%, 800px);
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: clamp(20px, 5%, 40px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* Fontes */
 
 h1 {
   font-family: "VT323", "Press Start 2P";
@@ -46,6 +39,19 @@ span {
   font-size: clamp(1rem, 3vw, 2rem);
 }
 
+/* Divs */
+
+.container {
+  max-width: clamp(300px, 90%, 800px);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: clamp(20px, 5%, 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .controles {
   display: flex;
   justify-content: space-between;
@@ -58,6 +64,8 @@ span {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Paleta */
 
 .cor-paleta {
   display: flex;
@@ -105,6 +113,10 @@ button:hover {
 
 #clear-btn:hover {
   background-color: #d32f2f;
+}
+
+#save-btn {
+  background-color: #2196f3;
 }
 
 .grid-container {
@@ -228,4 +240,46 @@ footer {
   background: black;
   border: 0.125rem solid #ccc; /* equivale a 2px */
   border-radius: 0.25rem; /* equivale a 4px */
+}
+
+.nome-cor {
+  font-size: 10px;
+  margin-top: 4px;
+  color: #333;
+}
+
+.cor-opcao::after {
+  content: attr(data-color-name);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.cor-opcao:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
