@@ -20,6 +20,13 @@ body {
   align-items: center;
 }
 
+footer {
+  font-family: "VT323", "Press Start 2P";
+  margin: clamp(20px, 5%, 40px);
+  color: white;
+  text-align: center;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
 /* Fontes */
 
 h1 {
@@ -37,6 +44,22 @@ span {
   color: white;
   margin-bottom: clamp(10px, 2%, 20px);
   font-size: clamp(1rem, 3vw, 2rem);
+}
+
+a {
+  color: white;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.instrucoes h3 {
+  margin-bottom: clamp(5px, 1%, 10px);
+  color: #495057;
+}
+
+.instrucoes p {
+  text-align: left;
+  margin-bottom: clamp(3px, 1%, 5px);
+  line-height: 1.5;
 }
 
 /* Divs */
@@ -62,6 +85,16 @@ span {
   padding: clamp(10px, 2%, 20px);
   background-color: #f8f9fa;
   border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instrucoes {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  text-align: center;
+  padding: clamp(5px, 1%, 10px);
+  border-radius: 10px;
+  background-color: #e9ecef;
+  margin-top: clamp(10px, 2%, 20px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -91,6 +124,8 @@ span {
   transform: scale(0.9);
 }
 
+/* Botões */
+
 button {
   padding: clamp(10px, 2%, 20px) 5px;
   margin: clamp(5px, 1%, 10px) 0;
@@ -119,6 +154,8 @@ button:hover {
   background-color: #2196f3;
 }
 
+/* -- Grade -- */
+
 .grid-container {
   display: flex;
   justify-content: center;
@@ -134,58 +171,6 @@ button:hover {
   border: 2px solid #555;
   width: fit-content;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.pixel {
-  width: var(--pixel-size);
-  height: var(--pixel-size);
-  background-color: white;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-sizing: border-box;
-}
-
-.pixel:hover {
-  opacity: 0.8;
-}
-
-.instrucoes {
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
-  text-align: center;
-  padding: clamp(5px, 1%, 10px);
-  border-radius: 10px;
-  background-color: #e9ecef;
-  margin-top: clamp(10px, 2%, 20px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.instrucoes h3 {
-  margin-bottom: clamp(5px, 1%, 10px);
-  color: #495057;
-}
-
-.instrucoes p {
-  text-align: left;
-  margin-bottom: clamp(3px, 1%, 5px);
-  line-height: 1.5;
-}
-
-footer {
-  margin: clamp(20px, 5%, 40px);
-  color: white;
-  text-align: center;
-  font-size: clamp(0.8rem, 2vw, 1rem);
-}
-
-.anuzita {
-  width: clamp(50px, 10vw, 100px);
-}
-
-.grid-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 .linha-coordenadas {
@@ -213,6 +198,26 @@ footer {
   font-size: clamp(0.6rem, 1.5vw, 1rem);
   color: #555;
   margin-right: 1px;
+}
+
+/* -- Pixels -- */
+
+.pixel {
+  width: var(--pixel-size);
+  height: var(--pixel-size);
+  background-color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.pixel:hover {
+  opacity: 0.8;
+}
+
+.anuzita {
+  width: clamp(50px, 10vw, 100px);
 }
 
 .coordenadas-x div,
