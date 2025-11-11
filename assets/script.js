@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let selectedColor = colors[0].hex;
 
-  // Criar paleta de cores (VERSÃO CORRIGIDA - SEM DUPLICAÇÃO)
   colors.forEach((colorObj) => {
     const colorOption = document.createElement("div");
     colorOption.className = "cor-opcao";
@@ -50,11 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
     colorOption.dataset.color = colorObj.hex;
     colorOption.dataset.colorName = colorObj.name; // Adiciona o nome da cor
 
+    const nomeCor = document.createElement("span");
+    nomeCor.textContent = colorObj.name;
+    nomeCor.className = "nome-cor"; // Pode ser ocultado visualmente com CSS, mas ainda lido pelo VLibras
+    colorOption.appendChild(nomeCor);
+
     // Atributos de acessibilidade
     colorOption.setAttribute("role", "button");
     colorOption.setAttribute("aria-label", `Cor ${colorObj.name}`);
     colorOption.setAttribute("tabindex", "0"); // Torna focável com teclado
     colorOption.setAttribute("aria-pressed", "false");
+    colorOption.setAttribute("position", "absolute");
 
     if (colorObj.hex === selectedColor) {
       colorOption.classList.add("ativada");
@@ -84,8 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     colorPalette.appendChild(colorOption);
   });
-
-  // ... o resto do seu código permanece igual
 
   // Coordenadas Y (lado esquerdo)
   const coordenadasY = document.querySelector(".coordenadas-y");
