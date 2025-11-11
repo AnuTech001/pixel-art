@@ -82,4 +82,5 @@
 
 	:: 📣 Créditos e Licença ::
 	Desenvolvido por AnuTech com apoio de ideias pixeladas e muito bom humor, kkkk. 
-	Licença: MIT (ou outra que preferir)	
+	Licença: MIT.	
+
