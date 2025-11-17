@@ -27,6 +27,7 @@ footer {
   text-align: center;
   font-size: clamp(1rem, 3vw, 2rem);
 }
+
 /* Fontes */
 
 h1 {
@@ -35,7 +36,7 @@ h1 {
   margin: clamp(10px, 2%, 20px);
   color: white;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 span {
@@ -47,7 +48,7 @@ span {
 }
 
 a {
-  color: white;
+  color: black;
   font-size: clamp(1rem, 3vw, 2rem);
 }
 
@@ -85,7 +86,7 @@ a {
   padding: clamp(10px, 2%, 20px);
   background-color: #f8f9fa;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
 }
 
 .instrucoes {
@@ -95,9 +96,20 @@ a {
   border-radius: 10px;
   background-color: #e9ecef;
   margin-top: clamp(10px, 2%, 20px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
 }
 
+.docs {
+  margin-top: clamp(10px, 2%, 20px);
+  padding: clamp(10px, 2%, 20px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: clamp(15px, 7%, 25px);
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+}
 /* Paleta */
 
 .cor-paleta {
@@ -170,7 +182,7 @@ button:hover {
   background-color: #ddd;
   border: 2px solid #555;
   width: fit-content;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
 }
 
 .linha-coordenadas {
@@ -311,5 +323,5 @@ button:hover {
 
 .imagens {
   width: clamp(150px, 30vw, 300px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
 }
