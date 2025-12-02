@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Modo cores aleatórias
   randomBtn.addEventListener("click", function () {
     document.querySelectorAll(".pixel").forEach((pixel) => {
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)].hex;
       pixel.style.backgroundColor = randomColor;
     });
   });
